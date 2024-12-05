@@ -86,7 +86,7 @@ if (age >= 18) {
         cout << "You are a senior citizen." <<endl;
     }
 }
-
+```
 ---
 
 ## **3. The switch Statement**
