@@ -6,13 +6,13 @@ This guide covers essential concepts of **arrays** in C++, including their decla
 
 ## Table of Contents
 
-1. [Introduction to Arrays](#introduction-to-arrays)
-2. [Declaring and Initializing Arrays](#declaring-and-initializing-arrays)
-3. [Common Array Operations](#common-array-operations)
-4. [Multidimensional Arrays](#multidimensional-arrays)
-5. [Problems and Practice](#problems-and-practice)
-6. [Matrix Multiplication](#matrix-multiplication)
-7. [Summary](#summary)
+1. [Introduction to Arrays](#1-introduction-to-arrays)
+2. [Declaring and Initializing Arrays](#2-declaring-and-initializing-arrays)
+3. [Common Array Operations](#3-common-array-operations)
+4. [Multidimensional Arrays](#4-multidimensional-arrays)
+5. [Problems and Practice](#5-problems-and-practice)
+6. [Matrix Multiplication](#6-matrix-multiplication)
+7. [Summary](#7-summary)
 
 ---
 
@@ -274,6 +274,8 @@ int main() {
             }
         }
     }
+
+
 
     // Display the result
     for (int i = 0; i < 2; i++) {
