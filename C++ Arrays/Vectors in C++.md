@@ -129,7 +129,6 @@ for (int i = 0; i < vec.size(); i++) {
 ### Sorting a Vector:
 
 ```cpp
-#include <algorithm>
 sort(vec.begin(), vec.end());
 ```
 
@@ -192,7 +191,7 @@ int main()
     {
         cout << result[i] << " ";
     }
-    cout << std::endl;
+    cout << endl;
 
     return 0;
 }
