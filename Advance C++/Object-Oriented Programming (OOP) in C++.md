@@ -16,11 +16,12 @@
    - [Abstraction](#25-abstraction)
 3. [Syntax of a Class](#3-syntax-of-a-class)
 4. [Constructors and Destructors](#4-constructors-and-destructors)
-5. [Access Specifiers](#5-access-specifiers)
-6. [Types of Inheritance](#6-types-of-inheritance)
-7. [Function Overriding and Virtual Functions](#7-function-overriding-and-virtual-functions)
-8. [Problems and Practice](#8-problems-and-practice)
-9. [Summary](#9-summary)
+5. [Setters and Getters](#5-setters-and-getters)
+6. [Access Specifiers](#6-access-specifiers)
+7. [Types of Inheritance](#7-types-of-inheritance)
+8. [Function Overriding and Virtual Functions](#8-function-overriding-and-virtual-functions)
+9. [Problems and Practice](#9-problems-and-practice)
+10. [Summary](#10-summary)
 
 ---
 
@@ -334,7 +335,7 @@ public:
 
 int main() {
     Triangle t;
-    t.draw();  // Output: Drawing a triangle: /\
+    t.draw();  // Output: Drawing a triangle: /\  
     return 0;
 }
 ```
@@ -436,9 +437,64 @@ int main() {
 }
 ```
 
+--- 
+
+## 5. Setters and Getters
+
+- **Setter**: A function to set the value of a private data member.
+- **Getter**: A function to get the value of a private data member.
+
+#### Detailed Explanation:
+Setters and getters provide controlled access to private data members. They help maintain **encapsulation** and allow validation when setting values.
+
+#### Example 1: Student Class with Setters and Getters
+```cpp
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+
+public:
+    string getName() const {
+        return name;
+    }
+    
+    void setName(const string& n) {
+        name = n;
+    }
+    
+    int getAge() const {
+        return age;
+    }
+    
+    void setAge(int a) {
+        if (a > 0) {  // Validation to ensure age is positive
+            age = a;
+        }
+    }
+};
+
+int main() {
+    Student student;
+    
+    student.setName("Alex");
+    student.setAge(20);
+    
+    cout << "Name: " << student.getName() << endl;  // Output: Name: Alex
+    cout << "Age: " << student.getAge() << endl;    // Output: Age: 20
+    
+    student.setAge(-5);  // Output: Invalid age!
+    
+    return 0;
+}
+```
+
 ---
 
-## 5. Access Specifiers
+## 6. Access Specifiers
 
 | Specifier   | Who Can Access?                |
 |-------------|--------------------------------|
@@ -480,7 +536,7 @@ int main() {
 
 ---
 
-## 6. Types of Inheritance
+## 7. Types of Inheritance
 
 - **Single**: One parent, one child.
 - **Multiple**: One child, many parents.
@@ -534,7 +590,7 @@ int main() {
 
 ---
 
-## 7. Function Overriding and Virtual Functions
+## 8. Function Overriding and Virtual Functions
 
 - **Overriding**: Child redefines parent’s method.
 - **Virtual**: Ensures the right method runs at runtime.
@@ -599,7 +655,7 @@ int main() {
 
 ---
 
-## 8. Problems and Practice
+## 9. Problems and Practice
 
 ### Problem 1: Create a Class for a Laptop
 ```cpp
@@ -648,6 +704,8 @@ public:
 int main() {
     Soccer s;
     s.play();  // Output: Playing Soccer
+
+
     s.kick();  // Output: Kicking the ball!
     return 0;
 }
@@ -690,7 +748,7 @@ int main() {
 
 ---
 
-## 9. Summary
+## 10. Summary
 
 | OOP Concept       | What It Does                                      | Example                 |
 |-------------------|--------------------------------------------------|-------------------------|
